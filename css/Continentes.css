@@ -1,0 +1,91 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: rgb(220,220,220);
+}
+
+.contenedorCont{
+  position: relative;
+  width: 800px;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continentesGen{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.continente{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.continente > img{
+  width: 100%;
+  height: 100%;
+}
+
+.continente > span{
+  opacity: 0;
+  position: absolute;
+  font-size: 26px;
+  color: #000;
+  pointer-events: none;
+  font-family: Arial;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.continente:hover > img{
+  transition: all 0.5s ease-out;
+  transform: scale(1.03);
+}
+
+.continente:hover > span{
+  transition: all 0.5s ease-out;
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.America{
+  top: 45px;
+  left: 0px;
+  width: calc(450px - 80px);
+}
+
+.Europa{
+  top: 38px;
+  left: calc(10px + 450px - 118px);
+  width: calc(250px - 50px);
+}
+
+.Asia{
+  top: 38px;
+  left: calc(10px + 440px);
+  width: calc(450px - 110px);
+}
+
+.Africa{
+  top: 164px;
+  left: calc(10px + 334px);
+  width: calc(250px - 70px);
+}
+
+.Oceania{
+  top: 278px;
+  left: calc(10px + 450px + 230px);
+  width: calc(250px - 140px);
+}

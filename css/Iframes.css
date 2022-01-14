@@ -1,0 +1,10 @@
+iframe{
+  width: 100%;
+  outline: none;
+  background: none;
+  border: 0;
+}
+
+.footerIfr{
+  height: 313px;
+}

@@ -1,0 +1,14 @@
+.f1, .f2, .f3{
+  display: block;
+  width: 40px;
+  height: calc(60px / 6);
+  margin-bottom: 2px;
+  background-color: #a3a833;
+}
+
+.btn-presentarMenu:hover > .f1,
+.btn-presentarMenu:hover > .f2,
+.btn-presentarMenu:hover > .f3{
+  transition: all 0.3s ease-out;
+  background-color: rgb(220, 220, 220);
+}

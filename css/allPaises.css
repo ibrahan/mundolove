@@ -1,0 +1,109 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+}
+
+.pais{
+  overflow: hidden;
+  position: relative;
+}
+
+.pais > .efect,
+.pais > .contImagen img,
+.pais > .contImagen button{
+  position: absolute;
+}
+
+.pais > .efect{
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pais > .efect > .contbpn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pais > .efect > .contbpn > p{
+  font-size: 46px;
+  color: #fff;
+  cursor: default;
+}
+
+.pais > .efect > .contbpn > p,
+.pais > .efect > .contBanderaPais{
+  margin-bottom: 10px;
+}
+
+.pais > .efect > button{
+  border: solid 2px #fff;
+  outline: 0;
+  background: none;
+  color: #fff;
+  font-size: 34px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pais > .efect > .contbpn > p:hover,
+.pais > .efect > button:hover,
+.pais > .efect > .contBanderaPais:hover,
+.pais > .efect > .contbpn:hover > .contBanderaPais,
+.pais > .efect > .contbpn:hover > .contBanderaPais,
+.pais > .efect > .contbpn:hover{
+  transition: all 0.3s ease-out;
+}
+
+.pais > .efect > .contbpn > p:hover{
+  color: #a3a833;
+}
+
+.pais > .efect > button:hover{
+  color: #a3a833;
+  border-color: #a3a833;
+}
+
+.pais > .efect > .contbpn:hover > p{
+  color: #a3a833;
+}
+
+.pais > .efect > .contbpn:hover{
+  transform: scale(1.02);
+}
+
+.pais > .efect > .contbpn:hover > .contBanderaPais{
+  border-color: #a3a833;
+}
+
+.pais > .efect > .contbpn > .contBanderaPais{
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 300px;
+  border: solid 2px #fff;
+}
+
+.pais > .contImagen{
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.pais > .contImagen > img,
+.pais > .efect > .contbpn > .contBanderaPais > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

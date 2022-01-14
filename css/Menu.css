@@ -1,0 +1,168 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  z-index: 9999;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+}
+
+nav{
+  position: relative;
+}
+
+nav, nav li, .btn-presentarMenu{
+  background-color: rgb(220,220,220);
+}
+
+nav > a > img{
+  width: 50px;
+  margin: 10px;
+}
+
+nav > .btn-ocultarMenu, .btn-presentarMenu{
+  width: 60px;
+  height: 60px;
+  border: 0;
+  cursor: pointer;
+}
+
+nav > .btn-ocultarMenu{
+  background: none;
+}
+
+nav > button > span, .btn-presentarMenu > span{
+  color: #a3a833;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+nav > .btn-ocultarMenu:hover, .btn-presentarMenu:hover{
+  transition: all 0.3s ease-out;
+  background-color: #a3a833;
+}
+
+nav > .btn-ocultarMenu:hover > span, .btn-presentarMenu:hover > span{
+  transition: all 0.3s ease-out;
+  color: rgb(220,220,200);
+}
+
+nav > .btn-ocultarMenu:focus, .btn-presentarMenu:focus{
+  outline: none;
+}
+
+.btn-presentarMenu{
+  z-index: 1;
+  position: fixed;
+  top: -60px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav, nav > ul{
+  display: flex;
+  align-items: center;
+}
+
+nav, nav ul, nav li, nav a{
+  height: 60px;
+}
+
+nav ul{
+  width: 100%;
+}
+
+nav li{
+  list-style: none;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #a3a833;
+  font-size: 28px;
+}
+
+nav a > span{
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+nav .p-menu > li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+nav .p-submenu, nav .s-submenu{
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+nav .p-submenu{
+  z-index: -1;
+  width: 100%;
+  top: 50px;
+}
+
+nav .p-submenu > li > a{
+  width: 100%;
+}
+
+nav .s-submenu{
+  z-index: -2;
+  left: 95%;
+  top: 0;
+}
+
+nav .s-submenu > li{
+  display: flex;
+  flex-direction: column;
+}
+
+nav .p-menu > li:hover,
+nav .p-submenu > li:hover,
+nav .s-submenu > li:hover{
+  transition: all 0.5s ease-out;
+  background-color: #a3a833;
+}
+
+nav .p-menu > li:hover > a,
+nav .p-menu > li:hover > a > span,
+nav .p-submenu > li:hover > a,
+nav .s-submenu > li:hover > a{
+  transition: all 0.5s ease-out;
+  color: rgb(220,220,200);
+}
+
+/*Hover de submenus*/
+nav .continentes:hover > .p-submenu{
+  transition: all 0.5s ease-out;
+  visibility: visible;
+  pointer-events: auto;
+  top: 60px;
+}
+
+nav .p-submenu > li:hover > .s-submenu{
+  transition: all 0.5s ease-out;
+  visibility: visible;
+  pointer-events: auto;
+  left: 100%;
+}
